@@ -1,5 +1,6 @@
 package org.launchcode.techjobs.oo;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import org.junit.Test;
@@ -14,4 +15,20 @@ public class JobTest {
 
         assertNotEquals(job1.getId(), job2.getId());
     }
+
+    @Test
+    public void testJobConstructorSetsAllFields() {
+
+        Job job = new Job("Product tester", new Employer("ACME"),
+                new Location("Desert"), new PositionType("Quality control"),
+                new CoreCompetency("Persistence"));
+
+        assertEquals("Product tester", job.getName());
+        assertTrue(job.getEmployer() instanceof Employer);
+        assertTrue(job.getLocation() instanceof Location);
+        assertTrue(job.getPositionType() instanceof PositionType);
+        assertTrue(job.getCoreCompetency() instanceof CoreCompetency);
+
+    }
+
 }
