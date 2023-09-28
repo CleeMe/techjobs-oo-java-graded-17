@@ -46,4 +46,16 @@ public class JobTest {
     }
 
 
+//    this should fail because I have zero lineSeparators in the code yet.
+//    testing still confuses me and I have not grasped how to tell if it is
+//    a well written test working correctly or a poorly written test not working
+    @Test
+    public void testToStringStartsAndEndsWithNewLine() {
+        Job job = new Job();
+        String result = job.toString();
+        assertTrue(result.startsWith(System.lineSeparator()));
+        assertTrue(result.endsWith(System.lineSeparator()));
+    }
+
+
 }
