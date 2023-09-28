@@ -58,4 +58,21 @@ public class JobTest {
     }
 
 
+//    whew today code is different for me.
+@Test
+    public void testToStringContainsCorrectLabelsAndData() {
+    Job job = new Job("Product tester", new Employer("ACME"),
+            new Location("Desert"), new PositionType("Quality control"),
+            new CoreCompetency("Persistence"));
+
+String expectedReturn =
+        System.lineSeparator() +
+        "ID: " + job.getId() + System.lineSeparator() +
+        "Name: "  + System.lineSeparator() +
+        "Employer: " + System.lineSeparator() +
+        "Location: " + System.lineSeparator() +
+        "Position Type: " + System.lineSeparator() +
+        "Core Competency: "  + System.lineSeparator();
+assertEquals(expectedReturn, job.toString());
+}
 }
