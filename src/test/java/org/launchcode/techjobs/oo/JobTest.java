@@ -75,4 +75,24 @@ String expectedReturn =
         "Core Competency: "  + System.lineSeparator();
 assertEquals(expectedReturn, job.toString());
 }
+
+//ok am going to copy and paste the object in the previous test and change it to be data not available for test due to no data
+@Test
+    public void testToStringHandlesEmptyField()  {
+        Job job = new Job("", new Employer(""),
+                new Location(""), new PositionType(""),
+                new CoreCompetency(""));
+
+        String expectedDna =
+
+                System.lineSeparator() +
+                        "ID: " + job.getId() + System.lineSeparator() +
+                        "Name: Data not available "  + System.lineSeparator() +
+                        "Employer: " + System.lineSeparator() +
+                        "Location: Data not available " + System.lineSeparator() +
+                        "Position Type: Data not available " + System.lineSeparator() +
+                        "Core Competency: Data not available "  + System.lineSeparator();
+        assertEquals(expectedDna, job.toString());
+
+}
 }

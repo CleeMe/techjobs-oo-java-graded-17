@@ -60,6 +60,9 @@ public class Job {
         return result;
     }
 
+//    change so that the "Data not available" works follow
+//    CJ video with append.
+
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
 
