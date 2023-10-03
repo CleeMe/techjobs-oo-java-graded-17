@@ -1,6 +1,10 @@
 package org.launchcode.techjobs.oo;
 
+import com.sun.source.tree.ReturnTree;
+import java.lang.System;
 import java.util.Objects;
+
+import static java.lang.System.lineSeparator;
 
 public class Job {
 
@@ -49,33 +53,32 @@ public class Job {
 
 //    @Override
 //    public String toString() {
-//        String result= System.lineSeparator() +
-//                "ID: " + this.getId() + System.lineSeparator() +
-//                "Name: " + this.getName() + System.lineSeparator() +
-//                "Employer: " + (this.getEmployer() != null ? this.getEmployer().getValue(): "Data not available") + System.lineSeparator() +
-//                "Location: " + (this.getLocation() != null ? this.getLocation().getValue(): "Data not available") + System.lineSeparator() +
-//                "Position Type: " + (this.getPositionType()  != null ? this.getPositionType().getValue(): "Data not available") + System.lineSeparator() +
-//                "Core Competency: " + (this.getCoreCompetency()  != null ? this.getCoreCompetency().getValue(): "Data not available")  + System.lineSeparator();
+//        StringBuilder sb = new StringBuilder();
 //
-//        return result;
+//        sb.append("ID: ").append(getId()).append(System.lineSeparator());
+//        sb.append("Name: ").append(name != null && !name.isEmpty() ? name : "Data not available").append(System.lineSeparator());
+//        sb.append("Employer: ").append(employer != null && employer.getValue() != null && !employer.getValue().isEmpty() ? employer.getValue() : "Data not available").append(System.lineSeparator());
+//        sb.append("Location: ").append(location != null && location.getValue() != null && !location.getValue().isEmpty() ? location.getValue() : "Data not available").append(System.lineSeparator());
+//        sb.append("Position Type: ").append(positionType != null && positionType.getValue() != null && !positionType.getValue().isEmpty() ? positionType.getValue() : "Data not available").append(System.lineSeparator());
+//        sb.append("Core Competency: ").append(coreCompetency != null && coreCompetency.getValue() != null && !coreCompetency.getValue().isEmpty() ? coreCompetency.getValue() : "Data not available").append(System.lineSeparator());
+//
+//        return sb.toString();
 //    }
+@Override
+public String toString() {
+    return
+            System.lineSeparator() +  "ID: " + this.getId() +
+            System.lineSeparator() +  "Name: " + this.getName() +
+            System.lineSeparator() +  "Employer: " + (this.getEmployer().getValue() == "" ? "Data not available" : this.getEmployer()) +
+            System.lineSeparator() +  "Location: " + (this.getLocation().getValue() == "" ? "Data not available" : this.getLocation()) +
+            System.lineSeparator() +  "Position Type: " + (this.getPositionType().getValue() == "" ? "Data not available" : this.getPositionType()) +
+            System.lineSeparator() +  "Core Competency: " + (this.getCoreCompetency().getValue() == ""? "Data not available" : this.getCoreCompetency())+
+            System.lineSeparator();
 
-//    change so that the "Data not available" works follow
-//    CJ video with append.
+//    return newLine + idString + nameString + employerString + locationString + positionTypeString + coreCompetencyString;
+}
 
-    @Override
-    public String toString() {
-        StringBuilder  sb = new StringBuilder();
 
-                        sb.append("ID: ").append(job.getId()).append(System.lineSeparator());
-                        sb.append("Name: ").append(name.isEmpty() ? "Data not available" : name).append(System.lineSeparator());
-                        sb.append("Employer: ").append(employer.getValue().isEmpty() ? "Data not available" : employer).append(System.lineSeparator());
-                        sb.append("Location: ").append(location.getValue().isEmpty() ? "Data not available" : location).append(System.lineSeparator());
-                        sb.append("Position Type: ").append(positionType.getValue().isEmpty() ? "Data not available" : positionType).append(System.lineSeparator());
-                        sb.append("Core Competency: ").append(coreCompetency.getValue().isEmpty() ? "Data not available" : coreCompetency).append(System.lineSeparator());
-
-              return sb.toString();
-    }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.

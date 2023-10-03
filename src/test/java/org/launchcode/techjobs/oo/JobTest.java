@@ -87,7 +87,7 @@ assertEquals(expectedReturn, job.toString());
 
                 System.lineSeparator() +
                         "ID: " + job.getId() + System.lineSeparator() +
-                        "Name: Data not available "  + System.lineSeparator() +
+                        "Name: " + job.getName() + System.lineSeparator() +
                         "Employer: Data not available " + System.lineSeparator() +
                         "Location: Data not available " + System.lineSeparator() +
                         "Position Type: Data not available " + System.lineSeparator() +
