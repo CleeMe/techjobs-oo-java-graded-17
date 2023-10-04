@@ -51,19 +51,6 @@ public class Job {
         return Objects.hash(id);
     }
 
-//    @Override
-//    public String toString() {
-//        StringBuilder sb = new StringBuilder();
-//
-//        sb.append("ID: ").append(getId()).append(System.lineSeparator());
-//        sb.append("Name: ").append(name != null && !name.isEmpty() ? name : "Data not available").append(System.lineSeparator());
-//        sb.append("Employer: ").append(employer != null && employer.getValue() != null && !employer.getValue().isEmpty() ? employer.getValue() : "Data not available").append(System.lineSeparator());
-//        sb.append("Location: ").append(location != null && location.getValue() != null && !location.getValue().isEmpty() ? location.getValue() : "Data not available").append(System.lineSeparator());
-//        sb.append("Position Type: ").append(positionType != null && positionType.getValue() != null && !positionType.getValue().isEmpty() ? positionType.getValue() : "Data not available").append(System.lineSeparator());
-//        sb.append("Core Competency: ").append(coreCompetency != null && coreCompetency.getValue() != null && !coreCompetency.getValue().isEmpty() ? coreCompetency.getValue() : "Data not available").append(System.lineSeparator());
-//
-//        return sb.toString();
-//    }
 @Override
 public String toString() {
     return

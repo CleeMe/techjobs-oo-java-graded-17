@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import org.junit.Test;
 
+import javax.swing.text.Position;
+
 public class JobTest {
     //TODO: Create your unit tests here
 
@@ -51,8 +53,15 @@ public class JobTest {
 //    a well written test working correctly or a poorly written test not working
     @Test
     public void testToStringStartsAndEndsWithNewLine() {
-        Job job = new Job();
-        String result = job.toString();
+
+        Employer employer = new Employer();
+        Location location = new Location();
+        PositionType positionType = new PositionType();
+        CoreCompetency coreCompetency = new CoreCompetency();
+
+        Job job = new Job("", employer, location, positionType, coreCompetency);
+        String result = System.lineSeparator() + job.toString() + System.lineSeparator();
+
         assertTrue(result.startsWith(System.lineSeparator()));
         assertTrue(result.endsWith(System.lineSeparator()));
     }
