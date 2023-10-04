@@ -88,10 +88,11 @@ assertEquals(expectedReturn, job.toString());
                 System.lineSeparator() +
                         "ID: " + job.getId() + System.lineSeparator() +
                         "Name: " + job.getName() + System.lineSeparator() +
-                        "Employer: Data not available " + System.lineSeparator() +
-                        "Location: Data not available " + System.lineSeparator() +
-                        "Position Type: Data not available " + System.lineSeparator() +
-                        "Core Competency: Data not available "  + System.lineSeparator();
+                        "Employer: Data not available" + System.lineSeparator() +
+                        "Location: Data not available" + System.lineSeparator() +
+                        "Position Type: Data not available" + System.lineSeparator() +
+                        "Core Competency: Data not available"  + System.lineSeparator();
+
         assertEquals(expectedDna, job.toString());
 
 }
