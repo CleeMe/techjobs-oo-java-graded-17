@@ -68,11 +68,11 @@ public class JobTest {
 String expectedReturn =
         System.lineSeparator() +
         "ID: " + job.getId() + System.lineSeparator() +
-        "Name: "  + System.lineSeparator() +
-        "Employer: " + System.lineSeparator() +
-        "Location: " + System.lineSeparator() +
-        "Position Type: " + System.lineSeparator() +
-        "Core Competency: "  + System.lineSeparator();
+        "Name: Product tester"  + System.lineSeparator() +
+        "Employer: ACME" + System.lineSeparator() +
+        "Location: Desert" + System.lineSeparator() +
+        "Position Type: Quality control" + System.lineSeparator() +
+        "Core Competency: Persistence"  + System.lineSeparator();
 assertEquals(expectedReturn, job.toString());
 }
 
