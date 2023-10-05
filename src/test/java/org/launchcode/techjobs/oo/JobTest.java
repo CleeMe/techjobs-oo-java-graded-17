@@ -5,8 +5,11 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import org.junit.Test;
+import org.yaml.snakeyaml.tokens.Token;
 
+import javax.naming.Name;
 import javax.swing.text.Position;
+import java.util.IdentityHashMap;
 
 public class JobTest {
     //TODO: Create your unit tests here
@@ -26,7 +29,17 @@ public class JobTest {
                 new Location("Desert"), new PositionType("Quality control"),
                 new CoreCompetency("Persistence"));
 
+
+//        make 5 assertEquals tests
         assertEquals("Product tester", job.getName());
+        assertEquals("ACME", job.getEmployer().getValue());
+        assertEquals("Desert", job.getLocation().getValue());
+        assertEquals("Quality control", job.getPositionType().getValue());
+        assertEquals("Persistence", job.getCoreCompetency().getValue());
+
+
+//        make 5 assertTrue tests
+        assertTrue(job.getName() instanceof String);
         assertTrue(job.getEmployer() instanceof Employer);
         assertTrue(job.getLocation() instanceof Location);
         assertTrue(job.getPositionType() instanceof PositionType);
